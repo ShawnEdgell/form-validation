@@ -7,12 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "pages" : "gh-pages -d dist"
+    "pages": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.23.0",
     "gh-pages": "^6.0.0",
     "terser": "^5.21.0",
     "vite": "^4.4.5",
+    "vite-plugin-babel": "^1.1.3",
     "vite-plugin-svgr": "^4.1.0"
   }
 }

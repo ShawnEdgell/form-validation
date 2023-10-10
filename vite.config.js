@@ -1,8 +1,19 @@
 import { defineConfig } from 'vite';
 import ViteSvg from 'vite-plugin-svgr';
+import babel from 'vite-plugin-babel';
 
 export default defineConfig({
-  plugins: [ViteSvg()],
+  plugins: [ViteSvg(),
+    babel({
+      babelConfig: {
+        babelrc: false,
+        configFile: false,
+        plugins: [
+          ["@babel/plugin-proposal-decorators", { "legacy": true }]
+        ]
+      }
+    })
+  ],
   base: '/form-validation/',
   resolve: {
     alias: {
@@ -23,5 +34,7 @@ export default defineConfig({
     https: false,  
     proxy: { 
     }
-  }
+  },
+  
 });
+
