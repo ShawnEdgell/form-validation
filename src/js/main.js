@@ -71,8 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
+    
         if (validateAll()) {
+            formError.textContent = '';  // Clear the error message
+            formError.style.display = 'none'; // Hide the error container
             displaySuccessfulSubmission(form);
         } else {
             formError.textContent = "Please fill out all fields correctly.";
